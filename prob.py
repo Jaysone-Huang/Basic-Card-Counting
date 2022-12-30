@@ -30,7 +30,9 @@ while (True):
     prob()
     try:
         user = str(input(">> ")).upper()  
-        print(user)  
+        print(user)
+        if(user == "quit"):
+            break
         deck[user] -=1
         cards-=1
         count = count + card_val[user]
