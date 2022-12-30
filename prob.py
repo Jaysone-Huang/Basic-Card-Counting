@@ -6,8 +6,8 @@ card_val = {'2': 1,
             '7': 0,
             '8': 0,
             '9': 0,
-            '0': -1, # use '0' for 10 to keep everything a single character
-            '`': -1,
+            '0': -1, # use '0' for 10-king to keep everything a single character
+            '`': -1, #this will account for aces
         }
 deck = {'2': 32,
         '3': 32,
@@ -17,8 +17,8 @@ deck = {'2': 32,
         '7': 32,
         '8': 32,
         '9': 32,
-        '0': 32*4, # use '0' for 10 to keep everything a single character
-        '`': 32,
+        '0': 32*4, # use '0' for 10-king to keep everything a single character
+        '`': 32, #this will account for aces
         }
 cards = 416
 def prob():
@@ -31,7 +31,7 @@ while (True):
     try:
         user = str(input(">> ")).upper()  
         print(user)
-        if(user == "quit"):
+        if(user == "QUIT"):
             break
         deck[user] -=1
         cards-=1
